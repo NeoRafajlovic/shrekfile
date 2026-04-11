@@ -28,8 +28,6 @@ set "file=%temp%\shrek_popup.vbs"
 >>"%file%" echo MsgBox "Oh no!"
 >>"%file%" echo Loop
 
-if not exist "%temp%\shrek_popup.vbs" echo FAILED TO CREATE FILE & pause
-
 start "" /max "https://i.pinimg.com/736x/75/6b/bb/756bbb4328e246e8608500ace5d9af0d.jpg"
 
 timeout /t 1 /nobreak >nul
